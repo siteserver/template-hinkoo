@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include>
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+<div class="new_ban">
+	<div class="ban_img">
+        <stl:channel type="ImageUrl" topLevel="1"></stl:channel>
+    </div>
+</div>
+<!--
+<div class="sho_ban">
+	<div class="ban_img">
+    	<img src="images/new_bansho.jpg"/>
+    </div>
+</div>
+-->
+<div class="new_tabs">
+	<div class="inner-width new_cid">
+        <stl:channels topLevel="1">
+            <stl:if testType="UpChannelOrSelf">
+                <stl:successTemplate>
+                    <stl:if testType="ItemIndex" testOperate="Equals" value="1">
+                            <stl:no>
+                                <p class="bg">|</p>
+                            </stl:no>
+                    </stl:if>
+                    <stl:a class="active">{Channel.Title}</stl:a> 
+                </stl:successTemplate>
+                <stl:failureTemplate> 
+                    <stl:if testType="ItemIndex" testOperate="Equals" value="1">
+                        <stl:no>
+                            <p class="bg">|</p>
+                        </stl:no>
+                    </stl:if> 
+                    <stl:a>{Channel.Title}</stl:a>
+                </stl:failureTemplate>
+            </stl:if> 
+        </stl:channels>  
+    </div>
+</div>
+<div class="new_list">
+	<div class="inner-width">
+        <stl:pageContents pageNum="9" scope="SelfAndChildren">
+            <div class="row new_blo">
+                <div class="col-md-2 col-sm-2 col-xs-3 tmdiv">
+                    <div class="grop">
+                        <p class="ym">
+                        </p>
+                        <p class="d"></p>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-9 newtx">
+                    <p class="num">{Channel.Title}</p>
+                    <stl:a target="_blank" class="tit">{Content.Title}</stl:a>
+                    <div class="det"> 
+                    </div>
+                    <div class="lookinto">
+                        <stl:a target="_blank">查看详情</stl:a>
+                    </div>
+                </div>
+            </div>
+        </stl:pageContents>  
+    </div>
+</div>
+<div class="t_page">
+	<div class="inner-width">
+    	<div class="pageList">
+        	<ul class="paginationList">
+                <stl:pageItem type="PreviousPage">
+                    <stl:successTemplate>
+                        <li class="previous"><a href="{Current.Url}">«</a></li> 
+                    </stl:successTemplate>
+                </stl:pageItem>
+                <stl:pageItem type="PageNavigation" listNum="10">
+                    <stl:successTemplate>
+                        <li><a href="{Current.Url}">{Current.Num}</a></li> 
+                    </stl:successTemplate>
+                    <stl:failureTemplate>
+                        <li class="active"><a href="#">{Current.Num}</a></li>  
+                    </stl:failureTemplate>
+                </stl:pageItem>  
+                <stl:pageItem type="NextPage">
+                    <stl:successTemplate>
+                        <li class="next"><a href="{Current.Url}">»</a></li>
+                    </stl:successTemplate> 
+                </stl:pageItem> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+<stl:include file="@/include/footer.html"></stl:include> 
+
+<script type="text/javascript" src="{Stl.SiteUrl}/js/page.js"></script>
+</body>
+</html>

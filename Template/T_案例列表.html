@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+	<div class="subject">
+		<div class="sub-banner">
+			<div class="home-tabs">
+				<div class="home-tab-box">
+                    <stl:if testType="ChannelIndex" testOperate="Equals" value="别墅设计">  
+                        <stl:yes>
+                           <stl:a  topLevel="1" class="active">全部案例</stl:a>
+                        </stl:yes> 
+                        <stl:no>
+                            <stl:a topLevel="1">全部案例</stl:a>
+                        </stl:no>   
+                    </stl:if> 
+                    <stl:channels topLevel="1">
+                        <stl:if testType="UpChannelOrSelf">
+                            <stl:successTemplate>
+                                <stl:a class="active">{Channel.Title}</stl:a>
+                            </stl:successTemplate>
+                            <stl:failureTemplate> 
+                               <stl:a>{Channel.Title}</stl:a>
+                            </stl:failureTemplate>
+                        </stl:if> 
+                    </stl:channels> 
+				</div>
+			</div>
+			<stl:channel type="ImageUrl" topLevel="1"  class="open-img"></stl:channel>  
+		</div>
+		
+		<div class="sub-model model-home">
+			<div class="case-model inner-width">
+				<p class="model-title-border">
+					<a>经典案例</a>
+                </p>
+				<div class="model-subtitle-box"> 
+                    <stl:contents channelIndex="关于我们" isRecommend="false" isHot="false" isTop="false" isImage="false" totalNum="1">
+                        <p class="model-subtitle">{content.Summary}</p>
+                    </stl:contents>
+                </div>
+				<div class="row cases">
+                    <stl:pageContents pageNum="6" scope="SelfAndChildren">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <stl:a target="_blank" class="anim-press">
+                                <div class="case-box case-shadow blank-bottom">
+                                    <img class="open-img" alt="{Content.Title}" 
+                                    src="{Content.ImageUrl}"/>
+                                    <div class="case-info">
+                                        <p class="case-style">{Content.Title}</p>
+                                        <p class="case-seq col-xs-0">|</p>
+                                        <p class="case-style">{Content.SubTitle}</p>
+                                        <p class="case-area col-xs-0">面积：{Content.Author}</p>
+                                    </div>
+                                </div>
+                            </stl:a>
+                        </div>
+                    </stl:pageContents> 
+				</div>
+                <div class="pageList">
+                    <ul class="paginationList">
+                        <stl:pageItem type="PreviousPage">
+                            <stl:successTemplate>
+                                <li class="previous"><a href="{Current.Url}">«</a></li> 
+                            </stl:successTemplate>
+                        </stl:pageItem>
+                        <stl:pageItem type="PageNavigation" listNum="10">
+                            <stl:successTemplate>
+                                <li><a href="{Current.Url}">{Current.Num}</a></li> 
+                            </stl:successTemplate>
+                            <stl:failureTemplate>
+                                <li class="active"><a href="#">{Current.Num}</a></li>  
+                            </stl:failureTemplate>
+                         </stl:pageItem>  
+                         <stl:pageItem type="NextPage">
+                            <stl:successTemplate>
+                                <li class="next"><a href="{Current.Url}">»</a></li>
+                            </stl:successTemplate> 
+                            </stl:pageItem> 
+                    </ul>
+                </div>
+			</div>
+		</div>
+		
+		<stl:include file="@/include/bottom.html"></stl:include> 
+
+</body>
+</html>

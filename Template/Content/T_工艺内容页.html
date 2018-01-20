@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <stl:include file="@/include/header.html"></stl:include> 
+  </head>
+  <body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+    <div class="subject">
+      <div class="sub-banner">
+        <div class="banner-info tech-banner-info">
+          <stl:channel type="Content" channelIndex="工艺"></stl:channel>
+        </div>
+        <img class="open-img" alt="土建施工" src="{Stl.SiteUrl}/images/tech_banner_.jpg"/>
+      </div>
+      
+      <div class="sub-model tech-inner-model">
+        <div class="case-model">
+          <div class="tech-icon-box inner-width">
+            <div class="row">
+              <stl:channels channelIndex="工艺">
+                <div class="col-md-12 col-sm-12 col-xs-12 col-eight inner-align">
+                  <stl:a>
+                    {stl:channel type=icon}
+                    <p class="tect-icon-info">{Channel.Title}</p>
+                  </stl:a>
+                </div>
+              </stl:channels>
+            </div>
+          </div>
+          
+          <div class="sub-model no-padding-bottom">
+            <div class="case-model inner-width">
+              <p class="model-title-border">
+                <a>{Content.Title}</a>
+              </p>
+              <div class="model-subtitle-box">
+                <p class="model-subtitle"><stl:content type="Summary"></stl:content></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row tech-model-box">
+            <stl:each type="ImageUrl">
+              <div class="col-md-6 col-sm-6 col-xs-6 no-padding">
+                <stl:image alt="{Content.Title}"  class="open-img" type="ImageUrl"></stl:image>
+              </div>
+            </stl:each>
+          </div>
+          
+          <div class="sub-model">
+            <div class="tech-model inner-width">
+              <div class="model-subtitle-box tech-subtitle-box">
+                <stl:content type="Content"></stl:content>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-foot-banner inner-width">
+          <div class="foot-banner-info">
+            <p class="font-white inner-align">{stl:value type=adv_word}</p>
+          </div>
+          <a class="font-white" href="javascript:;">现在预约</a>
+          {stl:value type=adv class="open-img"}
+        </div>
+      </div>
+    </div>
+    <stl:include file="@/include/footer.html"></stl:include> 
+    
+  </body>
+</html>

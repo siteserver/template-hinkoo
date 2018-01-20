@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+	<div class="subject">
+		<div class="sub-banner">
+			<div class="banner-info soft-banner-info">
+				<p class="ban-det"><stl:channel type="Summary2"></stl:channel></p>
+			</div>
+            <div class="home-tabs">
+				<div class="home-tab-box">
+                  	<stl:a class="active">设计师团队</stl:a>
+				</div>
+			</div>
+			<img class="open-img" alt="{Channel.Title}" src="{Channel.ImageUrl}"/>
+		</div>
+		
+		<div class="sub-model model-home">
+			<div class="case-model inner-width">
+				<p class="model-title-border">
+					<a><stl:channel channelIndex="设计师加入" type="Keywords"></stl:channel></a>
+				</p>
+				<div class="model-subtitle-box">
+					<p class="model-subtitle"><stl:channel channelIndex="设计师加入" type="Description"></stl:channel></p>
+				</div>
+				<div class="row teams">
+                    <stl:contents channelIndex="设计团队">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <stl:a target="_blank">
+                                <div class="team-info">
+                                    <p class="team-style font-white">{Content.SubTitle}</p>
+                                    <p class="team-seq font-white">|</p>
+                                    <p class="team-name font-white">{Content.Title}</p>
+                                    <p class="team-det-btn font-white">点击了解</p>
+                                </div>
+                                <div class="case-box case-shadow team-blank-bottom">
+                                    <img class="open-img" alt="{Content.Title}" 
+                                    src="{Content.ImageUrl}"/>
+                                </div>
+                            </a>
+                        </div>
+                    </stl:contents> 
+				</div>
+                <div class="pageList"></div>
+			</div>
+		</div>
+		
+		<div class="signs-box" style="background-image: url({Stl.SiteUrl}/images/team_foot_.jpg);">
+			<div class="team-signs">
+				<div class="case-model inner-width">
+					<p class="model-title-border">
+						<a class="font-white"><stl:channel channelIndex="设计师加入" type="Summary2"></stl:channel></a>
+					</p>
+					<div class="model-subtitle-box about-space">
+						<p class="model-subtitle font-white"><stl:channel channelIndex="设计师加入" type="Summary1"></stl:channel></p>
+					</div>
+				</div>
+				<div class="row team-style-box inner-width">
+                    <stl:contents channelIndex="设计师加入">
+                        <div class="col-md-2 col-sm-2 col-xs-2 col-five"><p class="inner-align font-white">{Content.Title}</p></div>
+                    </stl:contents>  
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<stl:include file="@/include/footer.html"></stl:include> 
+
+</body>
+</html>

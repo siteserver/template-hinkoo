@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+
+  <div class="subject">
+    <div class="sub-banner">
+              <div id="wowslider-container1" style="position: relative;max-height: 515px;">
+        <div class="ws_images">
+          <ul>
+                        <stl:contents channelIndex="首页轮播图" totalNum="4">
+                            <li><img class="open-img" alt="{Content.Title}" src="{Content.ImageUrl}"/></li>
+                        </stl:contents> 
+                    </contents>
+          </ul>
+        </div>
+        <div class="ws_bullets">
+          <div>
+                        <stl:contents channelIndex="首页轮播图" totalNum="4">
+                            <a href="#" title="{Content.Title}">
+                                <span>{Content.ItemIndex}</span>
+                            </a>
+                        </stl:contents>  
+            <div class="ws_shadow"></div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-model model-cases" style="background-image: url({Stl.SiteUrl}/images/main_back_1.jpg);">
+      <div class="case-model">
+        <p class="model-title-border">
+          <a>经典案例</a>
+        </p>
+        <div class="model-subtitle-box">
+          <p class="model-subtitle">30余年的园林设计经验，我们累积了上千次的经典设计案例及施工经验，无论是奢华的欧式、典雅的法式，或者是浪漫的美式，家的呈现形式万千变化，
+</p>
+                    <p class="model-subtitle">而您的家和豪宅之间，也许就差一次经典的设计，一次完美的设计终生受益，来贝高，我们为您准备了更多经典案例，给您的家带去更多设计灵感</p>
+        </div>
+        <div class="row cases inner-width">
+                    <stl:contents channelIndex="别墅设计" totalNum="3" isRecommend="true" scope="SelfAndChildren">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <stl:a target="_blank" class="anim-press">
+                                <div class="case-box case-shadow blank-bottom">
+                                    <img class="open-img" alt="{Content.Title}" 
+                                    src="{Content.ImageUrl}"/>
+                                    <div class="case-info">
+                                        <p class="case-style">{Content.Title}</p>
+                                        <p class="case-seq col-xs-0">|</p>
+                                        <p class="case-style">{Content.SubTitle}</p>
+                                        <p class="case-area col-xs-0">面积：{Content.Author}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </stl:contents> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="sub-model model-love">
+      <div class="case-model">
+        <p class="model-title-border">
+          <a>贝高文化</a>
+        </p>
+        <div class="model-subtitle-box">
+          <p class="model-subtitle">我们热爱生活，也享受生活，倡导贝高文化，每一个员工都是您私宅定制的设计师；</p>
+        </div>
+        <div class="phone-wall">
+          <img class="open-img" alt="{stl.SiteName}" src="{Stl.SiteUrl}/images/photo_wall_all.jpg"/>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sub-model model-team" style="background-image: url({Stl.SiteUrl}/images/main_back_2.jpg);">
+      <div class="case-model">
+        <p class="model-title-border">
+          <a>设计团队</a>
+        </p>
+        <div class="model-subtitle-box">
+          <p class="model-subtitle"><stl:channel channelIndex="设计团队" type="Summary1"></stl:channel></p>
+        </div>
+        <div class="row cases inner-width">
+          <stl:contents channelIndex="首页设计师" totalNum="3">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="case-box">
+                <div class="case-img">
+                  <img class="open-img" alt="{Content.Title}" src="{Content.ImageUrl}"/>
+                </div>
+              </div>
+            </div>
+          </stl:contents> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="sub-model model-news">
+      <div class="news-model">
+        <div class="row cases inner-width">
+          <div class="col-sm-12 bt-pad-visible">
+            <p class="model-title-border">
+              <stl:a channelIndex="新闻中心">{Channel.Title}</stl:a>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-0" df="a">
+            <stl:contents channelIndex="新闻中心" isImage="true" totalNum="1" scope="SelfAndChildren"> 
+              <stl:a target="_blank"><img class="open-img" alt="{Content.Title}" src="{Content.ImageUrl}"/> </stl:a>  
+            </stl:contents> 
+          </div>
+          <div class="col-xs-12 hidden bt-visible">
+            <p class="model-title-border">
+              <stl:a channelIndex="新闻中心">{Channel.Title}</stl:a>
+            </p>
+          </div>
+          <div class="col-md-6 col-sm-8 newses">
+            <stl:contents channelIndex="新闻中心" isRecommend="true" totalNum="7"  scope="SelfAndChildren">
+              <div class="news-box">
+                <stl:a class="news-title" target="_blank"><stl:content type="Title" wordNum="23"></stl:content></stl:a>
+                <div class="news-content"></div>
+              </div>
+            </stl:contents> 
+            <stl:a channelIndex="新闻中心" target="_blank" class="news-more">MORE</stl:a>
+          </div>
+          <div class="col-md-2 col-sm-2 col-sm-0 col-xs-0">
+            <p class="model-title-border">
+              <stl:a channelIndex="新闻中心">{Channel.Title}</stl:a>
+            </p>
+            <div class="news-img">
+              <img alt="新闻中心" src="{Stl.SiteUrl}/images/main_news_icon.jpg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="signs-box col-xs-0 col-sm-0" style="background-image: url({Stl.SiteUrl}/images/home_foot_.jpg);">
+      <div class="row main-signs">
+        <stl:contents channelIndex="首页底部业务介绍" totalNum="8">
+          <div class="sign-box col-md-3">
+            <img alt="{Content.Title}" src="{Content.ImageUrl}"/>
+            <div class="sign-info">
+              <p class="sign-title">{Content.Title}</p>
+              <p class="sign-content">{Content.Summary}</p>
+            </div>
+          </div>
+        </stl:contents> 
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="footer footer-main col-xs-0 col-sm-0">
+    <div class="row footer-box">
+      <div class="col-md-3 col-md-offset-2">
+        <p class="footer-title">导航分类</p>
+        <div class="footer-tab">
+          <stl:contents channelIndex="导航分类" totalNum="3" startNum="1">
+            <stl:a></stl:a>
+          </stl:contents>
+        </div> 
+        <div class="footer-tab">
+          <stl:contents channelIndex="导航分类" totalNum="3" startNum="4">
+            <stl:a></stl:a>
+          </stl:contents>
+        </div>
+        <div class="footer-tab">
+          <stl:contents channelIndex="导航分类" totalNum="3" startNum="7">
+            <stl:a></stl:a>
+          </stl:contents>
+        </div>
+        <div class="footer-class main-footer-class">
+          <p>Copyright © 1996-2018  All Rights Reserved</p> 
+        </div>
+      </div>
+      <div class="col-md-2">
+        <p class="footer-title">友情链接</p>
+        <div class="footer-link">
+          <stl:contents channelIndex="友情链接" totalNum="12">
+            <stl:a target="_blank"></stl:a>
+          </stl:contents>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <p class="footer-title">联系我们</p>
+        <div class="footer-tel-1">
+        <p>别墅设计：<a href="tel:{Stl.HotLine}">{Stl.HotLine}</a></p>
+          <p>业务电话：<a href="tel:{Stl.BusinessTel}">{Stl.BusinessTel}</a></p>
+          
+        </div>
+        <a href="tel:{Stl.HotLine}" class="footer-title">{Stl.HotLine}</a>
+        <div class="footer-tel-2">
+          <p>技术支持：<a target="_blank" href="http://www.siteserver.cn/">SiteServer CMS</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer footer-main bt-pad-visible bt-visible">
+    <div class="row footer-box">
+      <div class="col-md-12">
+        <div class="footer-class inner-align">
+          <p class="copyright">Copyright © 1996-2018 All Rights Reserved</p>
+          <p class="tech-support">技术支持：<a target="_blank" href="http://www.siteserver.cn/">SiteServer CMS</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/jquery.min.1.8.2.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/js/_public.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/js/hinkoo_script.js"></script>
+  
+    <script type="text/javascript" src="js/album.js"></script>
+<script>
+    jQuery("#wowslider-container1").wowSlider({
+    effect:"basic",
+    prev:"",next:"",
+    duration:20*100,
+    delay:20*100,
+    width:1349,
+    height:661,
+    autoPlay:true,
+    autoPlayVideo:false,
+    playPause:false,               
+    stopOnHover:false,
+    loop:false,
+    bullets:1,
+    caption:false,
+    captionEffect:"parallax",
+    controls:true,
+    controlsThumb:false,
+    responsive:1,
+    fullScreen:false,
+    gestures:2,
+    onBeforeStep:0,
+    images:0
+});  
+</script>
+<script language="javascript">
+function changeUrl(){
+  var url=location.href;
+  var s = url.indexOf("?");
+  if(s!=-1){
+    var getStr=url.substr(s);
+    var arr=document.getElementsByTagName("a");
+    for(var i=0;i<arr.length;i++){
+      var href=arr[i].getAttribute("href");
+      if(href.indexOf("?")==-1){
+        arr[i].setAttribute("href",href+getStr);
+      }else{
+        arr[i].setAttribute("href",href+getStr.replace("?","&"));
+      }
+      
+    }
+  }
+}
+changeUrl()
+</script>
+<script language="javascript">
+function changeUrl(){
+  var url=location.href;
+  var s = url.indexOf("?");
+  if(s!=-1){
+    var getStr=url.substr(s);
+    var arr=document.getElementsByTagName("a");
+    for(var i=0;i<arr.length;i++){
+      var href=arr[i].getAttribute("href");
+      if(href.indexOf("?")==-1){
+        arr[i].setAttribute("href",href+getStr);
+      }else{
+        arr[i].setAttribute("href",href+getStr.replace("?","&"));
+      }
+      
+    }
+  }
+}
+changeUrl()
+</script>
+
+</body>
+</html>

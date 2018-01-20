@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+	<div class="subject">
+		<div class="home-det-tabs">
+			<div class="home-tab-box det">
+                <stl:if testType="ChannelIndex" testOperate="Equals" value="别墅设计">  
+                    <stl:yes>
+                        <stl:a  topLevel="1" class="active">全部案例</stl:a>
+                    </stl:yes> 
+                    <stl:no>
+                        <stl:a topLevel="1">全部案例</stl:a>
+                    </stl:no>   
+                </stl:if> 
+                <stl:channels topLevel="1">
+                    <stl:if testType="UpChannelOrSelf">
+                        <stl:successTemplate>
+                            <stl:a class="active">{Channel.Title}</stl:a>
+                        </stl:successTemplate>
+                        <stl:failureTemplate> 
+                            <stl:a>{Channel.Title}</stl:a>
+                        </stl:failureTemplate>
+                    </stl:if> 
+                </stl:channels> 
+			</div>
+			<div class="home-album-box">
+				<div class="album">
+                     <div id="wowslider-container1" style="position: relative;max-height: 783px;">
+						<div class="ws_images">
+                <ul>
+                    <stl:each type="photo">
+                        <li><stl:photo type="largeUrl"></stl:photo></li>
+                    </stl:each> 
+                </ul>
+            </div>
+            <!--
+            <div class="ws_bullets">
+                <div>
+                    <a href="#" title="body_1_designer">
+                        <span>1</span>
+                    </a>
+                    <a href="#" title="body_2_designer">
+                        <span>2</span>
+                    </a>
+                    <a href="#" title="body_3_designer">
+                        <span>3</span>
+                    </a>
+                                   <a href="#" title="body_3_designer">
+                        <span>4</span>
+                    </a>
+                                   <a href="#" title="body_3_designer">
+                        <span>5</span>
+                    </a>
+                                   <a href="#" title="body_3_designer">
+                        <span>6</span>
+                    </a> 
+                    <div class="ws_shadow"></div>
+                 </div>
+            </div>
+            -->
+                     </div>
+				</div>
+				<div class="home-style-tab"><stl:channel></stl:channel></div>
+			</div>
+		</div>
+		
+		<div class="sub-model model-home-style">
+			<div class="home-model">
+				<p class="home-title">设计说明</p>
+				<div class="model-subtitle-box">
+					<p class="home-subtitle">楼盘名称：{Content.Title}</p>
+					<p class="home-subtitle">设计风格：{Content.SubTitle}</p>
+					<p class="home-subtitle">住宅面积：{Content.Author}</p>
+					<p class="home-subtitle">住宅房型：{Content.Source}</p>
+				</div>
+				<div class="home-subdetails">			                            
+			                        </div>
+			</div>
+		</div>
+		
+		<div class="model-subtitle-box">
+			<p class="belong">猜你喜欢</p>
+		</div>
+		<div class="row cases inner-width">
+                <stl:contents totalNum="3" order="Random" isImage="true">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+						<stl:a target="_blank" class="anim-press">
+							<div class="case-box case-shadow blank-bottom">
+								<img class="open-img" alt="{Content.Title}" 
+                                src="{Content.ImageUrl}"/>
+								<div class="case-info">
+									<p class="case-style">{Content.Title}</p>
+									<p class="case-seq col-xs-0">|</p>
+									<p class="case-style">{Content.SubTitle}</p>
+									<p class="case-area col-xs-0">面积：{Content.Author}</p>
+								</div>
+							</div>
+						</stl:a>
+                    </div>
+                </stl:contents> 
+		</div>
+	</div>
+	
+	<stl:include file="@/include/footer.html"></stl:include> 
+
+<script type="text/javascript" src="{Stl.SiteUrl}/js/album.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/js/script.js"></script>
+</body>
+</html>

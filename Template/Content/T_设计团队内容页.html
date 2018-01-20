@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+  <div class="subject">
+    <div class="sub-banner">
+      <stl:channel class="open-img" type="ImageUrl" channelIndex="设计师加入"></stl:channel>
+      <div class="team-det-info">
+        <div class="row inner-width">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <img alt="{Content.Title}" class="open-img" 
+                        src="{Content.ImageUrl}"/>
+          </div>
+          <div class="col-md-8 col-sm-8 det-info">
+            <p class="det-name font-white">{Content.Title}</p>
+            <p class="det-seq font-white">|</p>
+            <p class="det-style font-white">{Content.SubTitle}</p>
+            <p class="det-seq font-white">|</p>
+            <p class="det-time font-white">从业时间：{Content.Author}年</p>
+            <div class="det-details">{Content.Summary}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sub-model model-team-style">
+      <div class="home-model">
+        <p class="home-title team-space">个人案例</p>
+        <div class="home-subdetails"> 
+                    {Content.Content}
+        </div>
+      </div>
+    </div>
+    
+    <div class="model-subtitle-box">
+      <p class="belong">代表作品</p>
+    </div>
+    <div class="row cases inner-width"> 
+            <stl:sqlContents connectionStringName="ConnectionString" cellpadding="2">  
+                <stl:queryString>
+                    SELECT TOP 3 ID,NodeID,Title,SubTitle,Author,substring(ImageUrl,2,len(ImageUrl)-1) as ImageUrl FROM {Stl.TableForContent} WHERE PublishmentSystemId = {Stl.SiteId} and len(ImageUrl) > 5 and FileUrl='{Content.Title}' and NodeID in (select NodeID from siteserver_Node where ParentID=(select NodeID from siteserver_Node where NodeIndexName='别墅设计')) ORDER BY AddDate DESC
+                </stl:queryString>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                        <a target="_blank" class="anim-press" href="{Stl.SiteUrl}/contents/{sql.NodeID}/{sql.ID}.html">
+                        <div class="case-box case-shadow blank-bottom"> 
+                            <img src="{Stl.SiteUrl}/{sql.ImageUrl}" class="open-img" alt="{sql.Title}" />
+                            <div class="case-info"> 
+                                <p class="case-style">{sql.Title}</p>
+                                <p class="case-seq col-xs-0">|</p>
+                                <p class="case-style">{sql.SubTitle}</p>
+                                <p class="case-area col-xs-0">面积：{sql.Author}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </stl:sqlContents>
+    </div>
+  </div>
+  
+  <stl:include file="@/include/footer.html"></stl:include> 
+
+</body>
+</html>

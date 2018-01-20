@@ -1,0 +1,95 @@
+<div id="header-2" class="header header-look-2 bounceInTop col-xs-0">
+    <div class="nav-box">
+        <div class="row nav-body">
+            <div class="col-md-3 col-sm-2 col-xs-3 nav-img-2">
+                <a href="{Stl.SiteUrl}/" target="_blank"><img alt="{Stl.SiteName}" src="{Stl.Logo2}"></a>
+            </div>
+            <div class="col-md-7 col-sm-10 nav-link-2">
+                <ul class="nav">
+                    <stl:if testType="ChannelName" testOperate="Equals" value="首页">  
+                        <stl:yes>
+                            <li><a href="{Stl.SiteUrl}/" class="active">首页</a></li>
+                        </stl:yes> 
+                        <stl:no>
+                            <li><a href="{Stl.SiteUrl}/">首页</a></li>
+                        </stl:no>   
+                    </stl:if> 
+                    <stl:channels topLevel="0" groupChannel="nav">
+                        <stl:if testType="UpChannelOrSelf">
+                            <stl:successTemplate>
+                                <li><stl:a class="active">{Channel.Title}</stl:a></li>
+                            </stl:successTemplate>
+                            <stl:failureTemplate> 
+                                <li><stl:a>{Channel.Title}</stl:a></li>
+                            </stl:failureTemplate>
+                        </stl:if> 
+                    </stl:channels> 
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-7 col-sm-0 nav-tel"><a class="font-white" href="tel:{Stl.HotLine}">{Stl.HotLine}</a></div>
+        </div>
+    </div>
+</div>
+
+<div id="header-1" class="header header-look-1">
+    <div class="nav-btn hidden bt-visible">
+        <button class="btn nav-btn-go">H</button>
+        <div class="nav-list bounceInRight">
+            <ul>
+                <stl:if testType="ChannelName" testOperate="Equals" value="首页">  
+                    <stl:yes>
+                        <li><a href="{Stl.SiteUrl}/" class="active">首页</a></li>
+                    </stl:yes> 
+                    <stl:no>
+                        <li><a href="{Stl.SiteUrl}/">首页</a></li>
+                    </stl:no>   
+                </stl:if> 
+                <stl:channels topLevel="0" groupChannel="nav">
+                    <stl:if testType="UpChannelOrSelf">
+                        <stl:successTemplate>
+                            <li><stl:a class="active">{Channel.Title}</stl:a></li>
+                        </stl:successTemplate>
+                        <stl:failureTemplate> 
+                            <li><stl:a>{Channel.Title}</stl:a></li>
+                        </stl:failureTemplate>
+                    </stl:if> 
+                </stl:channels> 
+            </ul>
+        </div>
+    </div>
+    <div class="header-top"></div>
+        <div class="nav-box nav-white">
+			<div class="row nav-body">
+				<div class="col-md-3 col-sm-2 col-xs-3 nav-img-1">
+					<a href="{Stl.SiteUrl}/" target="_blank">
+						<div class="logo-1">
+                            <img alt="{Stl.SiteName}" src="{Stl.Logo}">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7 col-sm-10 col-xs-0 nav-link-1">
+					<ul class="nav">
+                        <stl:if testType="ChannelName" testOperate="Equals" value="首页">  
+                            <stl:yes>
+                                <li><a href="{Stl.SiteUrl}/" class="active">首页</a></li>
+                            </stl:yes> 
+                            <stl:no>
+                                <li><a href="{Stl.SiteUrl}/">首页</a></li>
+                            </stl:no>   
+                        </stl:if> 
+                        <stl:channels topLevel="0" groupChannel="nav">
+                            <stl:if testType="UpChannelOrSelf">
+                                <stl:successTemplate>
+                                    <li><stl:a class="active">{Channel.Title}</stl:a></li>
+                                </stl:successTemplate>
+                                <stl:failureTemplate> 
+                                    <li><stl:a>{Channel.Title}</stl:a></li>
+                                </stl:failureTemplate>
+                            </stl:if> 
+                        </stl:channels> 
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-0 col-xs-9 nav-tel"><a href="tel:{Stl.HotLine}">{Stl.HotLine}</a></div>
+			</div>
+		</div>
+	</div>

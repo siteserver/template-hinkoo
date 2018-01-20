@@ -1,0 +1,47 @@
+@charset "utf-8";
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, input, textarea, p, blockquote { margin:0; padding:0; position:0; font-size:12px;}
+fieldset, img {	border:0;}
+*{ margin:0; padding:0;}
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+ol, ul {list-style:none;}
+li { text-decoration:none;}
+caption, th { text-align:left;}
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; font-family:微软雅黑;}
+abbr, acronym {	border:0;}
+fieldset { display:inline;}
+button { line-height:1.2; vertical-align:middle; cursor:pointer;}
+a {	text-decoration:none;color:#333333; font-size:12px; font-family:微软雅黑;}
+a:hover { color:#FF0000; text-decoration:none;}
+a:active { color: #333333;text-decoration: none;}
+p {	word-break:break-all; font-size:12px; font-family:微软雅黑;}
+.clear { clear:both;}
+span,samp { font-size:12px; font-family:微软雅黑;}
+
+/*声明 WebFont*/
+@font-face {
+  font-family: 'founderMD';
+  src: url('../font/方正中雅宋_GBK.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'founderMAX';
+  src: url('../font/方正中雅宋_GBK.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'founderHJ';
+  src: url('../font/方正黑体简体.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'founderLT';
+  src: url('../font/FZLTCXHJW.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

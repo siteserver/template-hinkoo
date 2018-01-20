@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+.col-md-12{
+	width: 100%;
+    float: left;
+}
+.col-md-11{
+	width: 91.6666666667%;
+    float: left;
+}
+.col-md-10{
+	width: 83.3333333333%;
+    float: left;
+}
+.col-md-9{
+	width: 75%;
+    float: left;
+}
+.col-md-8{
+	width: 66.6666666667%;
+    float: left;
+}
+.col-md-7{
+	width: 58.3333333333%;
+    float: left;
+}
+.col-md-6{
+	width: 50%;
+    float: left;
+}
+.col-md-5{
+	width: 41.6666666667%;
+    float: left;
+}
+.col-md-4{
+	width: 33.3333333333%;
+    float: left;
+}
+.col-md-3{
+	width: 25%;
+    float: left;
+}
+.col-md-2{
+	width: 16.6666666667%;
+    float: left;
+}
+.col-md-1{
+	width: 8.33333333333%;
+    float: left;
+}
+.col-md-offset-1{
+    margin-left: 8.33333333%;
+}
+.col-md-offset-2{
+    margin-left: 16.66666667%;
+}
+
+.container{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+	width: 1170px;
+}
+
+#header-2{
+    display: none;
+}
+
+
+.sub-model {
+    padding: 50px 0;
+}
+.inner-width {
+    max-width: 75%;
+}
+.bt-pad-visible{
+    display: none;
+}
+
+.about-model {
+    padding-top: 100px;
+}
+.model-title {
+    font-size: 24px;
+}
+.about-space {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+.ban-title {
+    font-size: 24px;
+}
+.about-model-1 {
+    min-height: 260px;
+}
+.take-model {
+    bottom: -20%;
+}
+.back-1 {
+    max-width: 40%;
+    margin: 30px auto 0;
+}
+.about-model-2 {
+    min-height: 520px;
+}
+.take-model-2 {
+    bottom: -20%;
+}
+.back-2 {
+    max-width: 75%;
+}
+.inner-signs {
+    height: 327px;
+}
+.sign-info {
+    padding: 75px 0;
+}
+.sign-title {
+    font-size: 24px;
+}
+.sign-box {
+    margin-top: 25px;
+}
+.sign-box>a {
+    font-size: 14px;
+    line-height: 30px;
+}
+.phone-grid-info .grid-cases-title {
+    font-size: 20px;
+}
+.build-model-1 {
+    height: 353px;
+}
+.blank-bottom {
+    margin-bottom: 100px;
+}
+.home-tab-box>a {
+    color: #fff
+}
+.home-style-tab {
+    bottom: -40px;
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    padding-top: 10px;
+}
+.model-home-style {
+    padding: 120px 0 10px;
+}
+.home-title {
+    font-size: 24px;
+}
+.home-model {
+    max-width: 75%;
+    padding: 0 35px 120px;
+}
+.belong {
+    font-size: 20px;
+    line-height: 30px;
+}
+.grid-btn {
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    padding: 8px;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -70px;
+}
+.grid-btn .btn-box {
+    border: 2px solid #000;
+    padding: 32px 0;
+}
+.banner-soft-black {
+    width: 60%;
+    padding: 25px;
+    margin: 0 auto;
+    background-color: #000;
+}
+.refresh-foot-model {
+    padding-bottom: 120px;
+}
+.about-model {
+    padding-top: 160px;
+}
+.team-signs {
+    height: 600px;
+    padding-top: 120px;
+}
+.team-det-info {
+    bottom: -50%;
+}
+.det-info {
+    margin-top: 110px;
+}
+.det-info .det-details {
+    margin-top: 120px;
+}
+.model-team-style {
+    padding: 200px 0 10px;
+}
+.team-space {
+    margin-bottom: 25px;
+}
+.tech-icon-box {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+.inner-width {
+    max-width: 75%;
+}
+.col-eight {
+    width: 12.5%;
+}
+

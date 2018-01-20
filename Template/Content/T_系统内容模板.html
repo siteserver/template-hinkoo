@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+<div class="new_ban">
+	<div class="ban_img">
+    	<stl:channel type="ImageUrl" topLevel="1"></stl:channel>
+    </div>
+</div>
+<!--
+<div class="sho_ban">
+	<div class="ban_img">
+    	<img src="images/new_bansho.jpg"/>
+    </div>
+</div>
+-->
+<div class="new_tabs">
+	<div class="inner-width new_cid">
+    	<stl:a context="Channel" topLevel="1">返回新闻列表</stl:a>
+    </div>
+</div>
+<div class="new_list">
+	<div class="inner-width">
+    	<div class="row new_blo">
+        	<div class="col-md-2 col-sm-2 col-xs-3 tmdiv">
+            	<div class="grop">
+                    <p class="ym">
+</p>
+                    <p class="d"></p>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-9 newtx newcontenttx">
+            	<p class="num">{Content.Title}</p>
+            </div>
+            
+            <div class="col-md-12 col-sm-12 col-xs-12 news_content">
+                {Content.Content}            
+            </div>
+        </div>
+    </div>
+</div>
+<stl:include file="@/include/footer.html"></stl:include> 
+</body>
+</html>

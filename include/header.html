@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/css.css">
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/_public.css">
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/anim.css">
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/ie.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/_main.css">
+<link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/album_main.css">
+<stl:if testType="TemplateName" testOperate="Equals" value="系统首页模板">  
+  <stl:no>
+      <link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/_inner.css">
+  </stl:no> 
+</stl:if>
+<stl:if testType="TemplateName" testOperate="Equals" value="案例内容页">  
+  <stl:yes>
+      <link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/album.css">
+  </stl:yes> 
+</stl:if>
+<meta name="keywords" content="{Channel.Keywords}" />
+<meta name="description" content="{Channel.Description}" />
+<title>{Channel.Title} - {Stl.SiteName}</title>

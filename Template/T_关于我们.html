@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include>  
+  <div class="subject">
+    <div class="sub-banner">
+      <div class="banner-info about-banner-info">
+        <p class="ban-title ban-border"><stl:channel type="BannerBigText"></stl:channel></p>
+        <p class="ban-det"><stl:channel type="BannerSmallText"></stl:channel></p>
+      </div>
+      <img class="open-img" alt="{Channel.Title}" src="{Channel.ImageUrl}"/>
+    </div>
+    
+    <div class="sub-model about-model">
+      <div class="case-model">
+                <stl:contents isTop="true" totalNum="1">
+                    <p class="model-title">{content.Title}</p>
+                    <p class="model-title-en">{content.SubTitle}</p>
+                    <div class="model-subtitle-box inner-width">
+                        <p class="model-subtitle about-space">{content.Summary}</p>
+                    </div>
+                </stl:contents> 
+      </div>
+    </div>
+        
+        <stl:contents isHot="true" totalNum="1" startNum="1">
+            <div class="sub-model about-model-1" style="background-image: url({Content.ImageUrl});">
+                <div class="take-model">
+                    <div class="about-back-box">
+                        <p class="model-title font-white">{content.Title}</p> 
+                        <div class="row back-1">
+                            <stl:contents isRecommend="true" totalNum="2">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <img class="open-img" alt="{content.Title}" src="{Content.ImageUrl}"/>
+                                </div>
+                            </stl:contents> 
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </stl:contents>
+        <stl:contents isHot="true" totalNum="1" startNum="2">
+            <div class="sub-model about-model-2" style="background-image: url({Content.ImageUrl});">
+                <div class="take-model take-model-2">
+                    <div class="about-back-box">
+                        <p class="model-title">{content.Title}</p>
+                        <div class="model-subtitle-box inner-width">
+                            <p class="model-subtitle">{content.SubTitle}</p>
+                        </div> 
+                        <div class="row back-2">
+                            <stl:contents isRecommend="false" isHot="false" isTop="false"  isImage="true" totalNum="6">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <img class="open-img case-shadow" alt="{content.Title}" src="{Content.ImageUrl}"/>
+                                </div> 
+                            </stl:contents> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </stl:contents>
+    <div class="sub-model about-model">
+      <div class="case-model">
+        <div class="model-subtitle-box inner-width">
+                        <stl:contents isRecommend="false" isHot="false" isTop="false" isImage="false" totalNum="1">
+                            <p class="model-subtitle about-space">{content.Summary}</p>
+                        </stl:contents>
+        </div>
+      </div>
+    </div>
+    <stl:include file="@/include/bottom.html"></stl:include> 
+</body>
+</html>

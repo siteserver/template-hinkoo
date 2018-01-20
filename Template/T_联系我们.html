@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body>
+    <stl:include file="@/include/nav.html"></stl:include> 
+	<div class="subject" style="background-image: url({stl.siteurl}/images/contact_back.jpg);">
+		<div class="sub-model about-model no-padding-bottom">
+            <stl:contents totalNum="1" startNum="1">
+                <div class="case-model inner-width">
+                    <p class="model-title inner-align-left">{Content.Title}</p>
+                    <p class="model-title-en inner-align-left">{Content.SubTitle}</p>
+                    <div class="model-subtitle-box">
+                        <p class="model-subtitle inner-align-left">{Content.Summary}</p>
+                        <p class="model-subtitle inner-align-left">{Content.Source}</p>
+                    </div>
+                </div>
+            </stl:contents>
+		</div>
+                    
+		<div class="sub-model">
+			<div class="case-model inner-width">
+				<div class="model-subtitle-box inner-align">
+                    <stl:contents totalNum="1" startNum="2">
+                        <p class="model-subtitle bt-inline-block">电话：<a href="tel:{Content.Title}">{Content.Title}</a></p>
+                        <p class="contact-seq bt-inline-block col-xs-0">|</p>
+                        <p class="model-subtitle bt-inline-block">值班(微信)：<a href="{Content.SubTitle}">{Content.SubTitle}</a></p>
+                        <p class="contact-seq bt-inline-block col-xs-0">|</p>
+                        <p class="model-subtitle bt-inline-block">网址：{Content.Author}</p>
+                        <p class="contact-seq bt-inline-block col-xs-0">|</p>
+                        <p class="model-subtitle bt-inline-block">E-mail:{Content.Source}</p>
+                        
+                        <p class="model-subtitle contact-addr inner-align-left">{Content.Summary}</p>
+                    </stl:contents>
+					<a class="contact-tel" href="tel:{Stl.HotLine}">{Stl.HotLine}</a>
+				</div>
+			</div> 
+		</div>
+	
+		<stl:include file="@/include/bottom.html"></stl:include> 
+
+</body>
+</html>
